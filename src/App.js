@@ -2,21 +2,22 @@ import './App.css';
 import Header from './Header';
 import CreatureList from './CreatureList'
 import images from './creatures'
+import React, { Component } from 'react';
 
 
-function App() {
+
+class App extends Component {
+  
+  render() {
   return  ( 
     <div className="App">
-      <header className="App-header">
         <div>
-          Hello. 
           <Header/>
-          <CreatureList images={images}/>
-          <main> </main>
+          <main> <CreatureList images={images}/> </main>
         </div>
-      </header>
-       </div>
+    </div>
   );
 }
+}
 
-export default App;
+export default App

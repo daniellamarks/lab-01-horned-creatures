@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
+import './CreatureItem.css'
 
 class CreatureItem extends Component {
 
     render() {
     const images = this.props.creatureImageProp;
     console.log(images)
+
     return (
         <>
-         <div className="CreatureItem">
+         <li className="CreatureItem">
              <h2> {images.title}</h2>
-             <img src={images.url} alt="creatures"/>
-             <div>
+             <img src={images.url} alt={images.name}/>
+             {/* <div>
                  {images.description}
-             </div>
-             <div>
-                 <p>How many horns?</p>{images.horns}
-             </div>
-         </div>
+             </div> */}
+             <p>How many horns? {images.horns}</p>
+         </li>
         </>    
     );
     }
