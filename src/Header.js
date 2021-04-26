@@ -1,11 +1,19 @@
 import React, { Component } from 'react'
+import './Header.css'
 
- export default class Header extends Component {
+export default class Header extends Component {
+
     render() {
         return (
-            <div>
+            <header className="Header">
+
+                {/* <img
+                    className="logo"
+                    alt="logo"
+                    src="cats/felix.png"
+                /> */}
                 <h1> Horned Creatures</h1>
-                </div>
+            </header>
         );
     }
 
