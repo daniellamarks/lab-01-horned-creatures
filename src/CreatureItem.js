@@ -1,20 +1,26 @@
-import React from 'react';
-import images from './creatures';
+import React, { Component } from 'react';
 
-function CreatureItem(images) {
+class CreatureItem extends Component {
+
+    render() {
+    const images = this.props.creatureImageProp;
+    console.log(images)
     return (
         <>
-         <div className="creatureItem">
-             <h2>
-                {this.images.title}
-             </h2>
-             <img src={this.images.url} alt="creatures"></img>
+         <div className="CreatureItem">
+             <h2> {images.title}</h2>
+             <img src={images.url} alt="creatures"/>
              <div>
-                 {this.images.description}
+                 {images.description}
+             </div>
+             <div>
+                 <p>How many horns?</p>{images.horns}
              </div>
          </div>
         </>    
-    )
+    );
+    }
+
 }
 
 export default CreatureItem

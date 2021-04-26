@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
-export default class Header extends Component {
+ export default class Header extends Component {
     render() {
         return (
             <div>
-                Hey
-            </div>
-        )
+                <h1> Horned Creatures</h1>
+                </div>
+        );
     }
+
 }

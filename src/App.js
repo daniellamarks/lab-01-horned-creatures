@@ -1,5 +1,8 @@
 import './App.css';
 import Header from './Header';
+import CreatureList from './CreatureList'
+import images from './creatures'
+
 
 function App() {
   return  ( 
@@ -8,9 +11,8 @@ function App() {
         <div>
           Hello. 
           <Header/>
-        
-          <main></main>
-
+          <CreatureList images={images}/>
+          <main> </main>
         </div>
       </header>
        </div>
