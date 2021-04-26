@@ -7,12 +7,12 @@ class CreatureList extends Component {
 
     render() {
 
-        const images = this.props.images;
+        const creatures = this.props.creatureImageProp;
 
     return (
         <ul className="CreatureList">
-            {images.map(image => (
-                <CreatureItem key={image.keyword} creatureImageProp={image}/>
+            {creatures.map(eachCreatureItem => (
+                <CreatureItem key={eachCreatureItem.keyword} creatureImageProp={eachCreatureItem}/>
             ))}
         </ul>
     );
