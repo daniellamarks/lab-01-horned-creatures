@@ -12,8 +12,9 @@ class CreatureList extends Component {
     return (
         <ul className="CreatureList">
             {creatures.map(eachCreatureItem => {
+                //(eachCreatureItem, index) -- key={index}
                 //changed to return to console.log
-            return <CreatureItem key={eachCreatureItem.keyword} creatureImageProp={eachCreatureItem}/>
+            return <CreatureItem key={eachCreatureItem.title} creatureImageProp={eachCreatureItem}/>
     })}
         </ul>
     );
