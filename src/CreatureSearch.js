@@ -5,9 +5,15 @@ export default class CreatureSearch extends Component {
   
   render() {
     return (
-      <div className="CreatureSearch">
+      <div>
         
-        <form>
+        <form className="CreatureSearch">
+            <input type="text" id="searchBox" name="searchBox"></input>
+            <select>
+                <option value="">Sort...</option>
+                <option value="name">By name</option>
+                <option value="# of horns">By Lives</option>
+            </select>
             <button>Search</button>
         </form>
 
