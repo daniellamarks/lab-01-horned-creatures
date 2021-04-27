@@ -21,7 +21,8 @@ export default class CreatureSearch extends Component {
         this.props.onSearch(this.state)
         console.log(this.state)
     }
-   
+
+    
 
   render() {
 
