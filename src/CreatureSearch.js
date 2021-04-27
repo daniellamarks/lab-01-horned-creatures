@@ -18,6 +18,7 @@ export default class CreatureSearch extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.onSearch(this.state)
+        console.log(this.state)
     }
    
 
