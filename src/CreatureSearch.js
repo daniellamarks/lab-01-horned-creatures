@@ -6,13 +6,14 @@ export default class CreatureSearch extends Component {
         nameFilter: '',
         sortField: ''
     }
-  
+    //update
     handleNameFilter = ({ target }) => {
-        this.setState({nameFilter: target.value})
+        // console.log(target)
+        this.setState({ nameFilter: target.value });
     }
 
     handleSortField = ({ target }) => {
-        this.setSate({ sortField: target.value })
+        this.setState({ sortField: target.value });
     }
     
     handleSubmit = (e) => {
@@ -25,13 +26,15 @@ export default class CreatureSearch extends Component {
   render() {
 
     const { nameFilter, sortField } = this.state;
+    // console.log(nameFilter)
+    // console.log(this.state)
     //const nameFilter = this.state.nameFilter
     //const sortField = this.state.sortField
 
     return (
       <div>
         
-        <form className="CreatureSearch">
+        <form className="CreatureSearch" onSubmit={this.handleSubmit}>
             <input 
                 value={nameFilter} 
                 name="nameFilter"

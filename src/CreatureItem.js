@@ -4,8 +4,8 @@ import './CreatureItem.css'
 class CreatureItem extends Component {
 
     render() {
-    const creatures = this.props.creatureImageProp;
-    console.log(creatures)
+    const creatures = this.props.creatureImagePropChild;
+    // console.log(creatures)
 
     return (
         <>

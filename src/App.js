@@ -9,12 +9,15 @@ import CreatureSearch from './CreatureSearch';
 
 class App extends Component {
   
+  handleSearch = (search) => {
+    console.log(search)
+  }
   render() {
   return  ( 
     <div className="App">
         <div>
           <Header/>
-          <CreatureSearch/>
+          <CreatureSearch onSearch={this.handleSearch}/>
           <main> <CreatureList creatureImageProp={creatures}/> </main>
         </div>
     </div>
