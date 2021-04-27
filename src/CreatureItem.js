@@ -4,18 +4,18 @@ import './CreatureItem.css'
 class CreatureItem extends Component {
 
     render() {
-    const images = this.props.creatureImageProp;
-    console.log(images)
+    const creatures = this.props.creatureImagePropChild;
+    // console.log(creatures)
 
     return (
         <>
          <li className="CreatureItem">
-             <h2> {images.title}</h2>
-             <img src={images.url} alt={images.name}/>
+             <h2> {creatures.title}</h2>
+             <img src={creatures.url} alt={creatures.name}/>
              {/* <div>
                  {images.description}
              </div> */}
-             <p>How many horns? {images.horns}</p>
+             <p>How many horns? {creatures.horns}</p>
          </li>
         </>    
     );
