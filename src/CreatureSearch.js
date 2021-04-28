@@ -49,7 +49,7 @@ export default class CreatureSearch extends Component {
             >
                 <option value="">Sort...</option>
                 <option value="name">By name</option>
-                <option value="# of horns">By Lives</option>
+                <option value="# of horns">By Horns</option>
             </select>
             <button>Search</button>
         </form>
