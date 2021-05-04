@@ -1,23 +1,27 @@
 import './App.css';
 import Header from './Header';
 import CreatureList from './CreatureList'
-import creaturesData from './creatures'
+// import creaturesData from './creatures'
 import React, { Component } from 'react';
 import CreatureSearch from './CreatureSearch';
+import request from 'superagent'
 
+const CREATURES_API_URL = `https://backend-setup-lab06.herokuapp.com/data/creaturesData`;
 
 
 class App extends Component {
 
-  state = {
-    creatures: creaturesData
-  }
+  state = { creatures: [] }
   
-  handleSearch = ({ nameFilter, sortField }) => {
+  async componentDidMount() {
+    const response = await request.get(CREATURES_API_URL)
+    this.setState({ creatures: response.body })
+  }
+
+  handleSearch = async({ nameFilter, sortField }) => {
     const nameRegex = new RegExp(nameFilter, 'i');
-
-    const searchedData = creaturesData
-
+    const response = await request.get(CREATURES_API_URL)
+    
     .filter(creature => {
       return creature.title.match(nameRegex);
     })
@@ -28,9 +32,8 @@ class App extends Component {
       return 0;
     });
 
-    this.setState({ creatures: searchedData });
-
-  }
+    this.setState({ creatures: response.body });
+    };
 
   render() {
 
